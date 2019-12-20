@@ -1,0 +1,24 @@
+<div class="form-body">
+<div class="row">
+    <div class="col-xs-offset-1 col-xs-10">
+        <div class="text-center">
+            <h4>Log in</h4>
+        </div>
+    </div>
+</div>
+ 
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <!--この行はフォームに入力されたEmailアドレスとパスワードをsession_pathに渡して、認証を行う-->
+    <div class="form-group has-icon">
+      <label class="control-label sr-only" for="inputEmail">Email</label>
+      <%= f.email_field :email, autofocus: true, class:"form-control", id:"inputEmail", placeholder:"メールアドレス"%>
+      <span class="fa fa-envelope " aria-hidden="true"></span>
+    </div>
+    <div class="form-group has-icon">
+      <label class="control-label sr-only" for="inputPassword">Password</label>
+      <%= f.password_field :password, autocomplete: "off", class:"form-control", id:"inputPassword", placeholder:"パスワード" %>
+      <span class="fa fa-lock form-control-icon" aria-hidden="true"></span>
+    </div>
+    <%= f.submit "Log in", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
+  <% end %>
+</div>
