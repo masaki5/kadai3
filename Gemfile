@@ -70,7 +70,7 @@ gem 'devise' #ユーザ登録機能追加
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"#画像投稿機能実装
 
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails'#Bootstrap
 
 gem 'pry-rails'
